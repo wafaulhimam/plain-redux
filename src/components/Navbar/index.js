@@ -8,6 +8,8 @@ const Navbar = () => {
             <Link to='/counter'>Counter</Link>
             <br />
             <Link to='/basket'>basket</Link>
+            <br />
+            <Link to='/contributor'>Contributor</Link>
         </>
     )
 }

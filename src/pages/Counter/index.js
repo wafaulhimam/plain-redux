@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { HandleAdd, HandleSubt } from '../../redux/actions';
 
 // const Counter = (props) => {
 const Counter = ({ hitungGan, handleAddAction, handleSubtAction }) => {
@@ -38,10 +39,15 @@ const mapStateToProps = (state) => {
     }
 }
 
+// const handleAddGuys = () => {
+//     return false
+// }
+
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleAddAction: () => dispatch({ type: 'HANDLE_ADD' }),
-        handleSubtAction: () => dispatch({ type: 'HANDLE_SUBT' }) 
+        // handleAddAction: () => dispatch(handleAddGuys()),
+        handleAddAction: () => dispatch(HandleAdd),
+        handleSubtAction: () => dispatch(HandleSubt) 
     }
 }
 

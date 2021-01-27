@@ -1,8 +1,10 @@
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Counter from './pages/Counter';
 import Basket from './pages/Basket';
+import Contributor from './pages/Contributor';
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
         </Route>
         <Route path='/basket'>
           <Basket />
+        </Route>
+        <Route path="/contributor">
+          <Contributor />
         </Route>
       </Switch>
 
