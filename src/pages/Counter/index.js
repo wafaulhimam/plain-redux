@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { HandleAdd, HandleSubt } from '../../redux/actions';
+import { HandleAdd, HandleSubt } from '../../redux/counter/actions';
 
 // const Counter = (props) => {
 const Counter = ({ hitungGan, handleAddAction, handleSubtAction }) => {
@@ -35,7 +35,7 @@ const Counter = ({ hitungGan, handleAddAction, handleSubtAction }) => {
 
 const mapStateToProps = (state) => {
     return {
-        hitungGan: state.hitung
+        hitungGan: state.counter.hitung
     }
 }
 
