@@ -14,6 +14,7 @@ function* getDataWorker() {
     }
 }
 
+
 // combine all saga watcher
 export default function* rootSaga() {
     yield takeLatest(GET_DATA_REQUEST, getDataWorker)
