@@ -7,7 +7,7 @@ import { getDataError, getDataSuccess } from './actions';
 function* getDataWorker() {
     try {
         const response = yield call(axios.get, 'https://reqres.in/api/users?page=2');
-        const data = response;
+        const data = response.data.data;
         yield put(getDataSuccess(data));
     } catch (error) {
         yield put(getDataError(error))
